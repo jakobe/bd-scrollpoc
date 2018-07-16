@@ -10,8 +10,7 @@ export class AppComponent {
   numbers : {number}[] = [];
 
   ngOnInit() {
-    for (var i = 0; i <= 500; i++) {
-      console.info(i);
+    for (var i = 0; i <= 50000; i++) {
       this.numbers.push({ number: i});
     }
   }
