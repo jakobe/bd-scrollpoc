@@ -7,11 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  numbers : {number}[] = [];
+  numbers : { title:string, number:number}[] = [];
 
   ngOnInit() {
+    const activities = ['DK Sushishoppen', 'DK Din tankstation', 'Til mormor', 'Biografen', 'TV-butikken', 'Overført fra mor', 'Tøjbutikken', 'Stormagasinet A/S'];
+    let activitiesCopy = [...activities];
     for (var i = 0; i <= 50000; i++) {
-      this.numbers.push({ number: i});
+      const activity = activitiesCopy[Math.floor(Math.random() * activitiesCopy.length)];
+      this.numbers.push({ title: activity, number: i});
     }
   }
 }
